@@ -1,0 +1,16 @@
+[
+{
+    "title": "11ty Recipes",
+    "speaker": "Mike Aparicio",
+    "summary": "11ty.recipes helps you build an Eleventy site from scratch, showing you how to add individual features to craft the exact site you need.",
+    "data": "fri 22/12",
+    "image": "wordmark.svg"
+  },
+  {
+    "title": "11ty",
+    "speaker": "Adham Ahmed",
+    "summary": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself.",
+    "data": "fri 11/02",
+    "image": "possum.svg"
+  }
+]

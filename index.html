@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Saucceeee</title>
-    <link rel="stylesheet" href="css/sauce.css">
-</head>
-<body>
-    <header> 
-        <h1> The Sauce</h1>
-    </header>
-   
+--- 
+title: The Sauce
+layout: base
+---
+
 <section>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -19,27 +10,17 @@
 </section>
 <main>
     <h2>Upcoming Events</h2>
-    
+    {% for event in events %}
         <figure>
-            <img src="images/wordmark.svg" alt="11ty Recipes" height="150" width="150">
+            <img src="images/{{ event.image }}" alt="{{ event.title }}" height="150" width="150">
         </figure>
         <figcaption>
-            <h3>11ty Recipes</h3>
-            <p>Mike Aparicio</p>
-            <p>11ty.recipes helps you build an Eleventy site from scratch, showing you how to add individual features to craft the exact site you need.</p>
-            <p>fri 22/12</p>
+            <h3>{{ event.title }}</h3>
+            <p>{{ event.speaker }}</p>
+            <p>{{ event.summary }}</p>
+            <p>{{ event.data }}</p>
         </figcaption>
-    
-        <figure>
-            <img src="images/possum.svg" alt="11ty" height="150" width="150">
-        </figure>
-        <figcaption>
-            <h3>11ty</h3>
-            <p>Adham Ahmed</p>
-            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself.</p>
-            <p>fri 11/02</p>
-        </figcaption>
-    
+    {% endfor %}
     <p><a href=""> Previous talks</a></p>
     <h2>Have a Talk Idea?</h2>
     <form name="demo-form" netlify>
@@ -61,6 +42,3 @@
         <button type="submit">Make it so</button>
     </form>
 </main>
- 
-</body>
-</html>
